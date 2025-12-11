@@ -14,7 +14,7 @@ def session():
 def test_simple_get(session):
     """Проверка базового GET-запроса."""
     response = session.get(BASE_GET_URL)
-    assert response.status_code == 500
+    assert response.status_code == 200
     assert not response.json().get('args'), 'Параметры args не пусты'
 
 # Тест №2: GET-запрос с параметрами
